@@ -149,6 +149,36 @@ app.put("/update3/:id", async (req, res) => {
     }
 })
 
+app.get("/get1", async (req, res) => {
+    try{
+        const user = await User.find()
+        res.send(user)
+    }
+    catch(err){
+        console.log(err)
+    }
+})
+
+app.get("/get2", async (req, res) => {
+    try{
+        const user2 = await User2.find()
+        res.send(user2)
+    }
+    catch(err){
+        console.log(err)
+    }
+})
+
+app.get("/get3", async (req, res) => {
+    try{
+        const user3 = await User3.find()
+        res.send(user3)
+    }
+    catch(err){
+        console.log(err)
+    }
+})
+
 app.get("/", (req,res) =>{
     res.send("Api is working")
 })
