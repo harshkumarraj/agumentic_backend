@@ -97,7 +97,7 @@ app.post("/add3", async (req, res) => {
     }
 })
 
-app.put("/update1/:id", async (req, res) => {
+app.patch("/update1/:id", async (req, res) => {
     const id = req.params.id
     const title = req.body.title
     const description = req.body.description
@@ -115,7 +115,7 @@ app.put("/update1/:id", async (req, res) => {
     }
 })
 
-app.put("/update2/:id", async (req, res) => {
+app.patch("/update2/:id", async (req, res) => {
     const id = req.params.id
     const title = req.body.title
     const img = req.body.img
@@ -131,7 +131,7 @@ app.put("/update2/:id", async (req, res) => {
     }
 })
 
-app.put("/update3/:id", async (req, res) => {
+app.patch("/update3/:id", async (req, res) => {
     const id = req.params.id
     const title = req.body.title
     const img = req.body.img
@@ -182,11 +182,6 @@ app.get("/get3", async (req, res) => {
 app.get("/", (req,res) =>{
     res.send("Api is working")
 })
-
-
-
-
-
 
 
 
